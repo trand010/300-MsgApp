@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: 'Avenir', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'Avenir', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.app {
+  width: 100vw;
+  color: white;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background-color: #23272A;
+}
+.auth-form {
+  width: 600px;
+  padding: 30px;
+  max-width: 100%;
+  border-radius: 20px;
+  background-color: #2C2F33;
+  box-shadow: 0px 0px 10px black;
+}
+.auth-form label {
+  display: block;
+  margin-bottom: 25px;
+}
+.auth-form input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: #d2d2d2;
+}
+.auth-form button {
+  padding: 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background-color: #030a24;
+}
+.auth-form button:hover {
+  box-shadow: 0px 0px 3px black;
+}
+.auth-form button:disabled {
+  color: darkgray;
+  cursor: not-allowed;
+  background-color: gray;
+}
+.auth-link-container {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.auth-link {
+  color: gray;
+  cursor: pointer;
+  font-weight: bold;
+}
+.auth-link:hover {
+  color: #5c5caa;
+}
+.error {
+  color: #c40b0b;
+  font-weight: bold;
+}
