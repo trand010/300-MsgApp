@@ -22,8 +22,10 @@ try {
 
 //share the instances of the application without having to
 //initialize it in different components
-export const fb = {
+const fb = {
   auth: firebase.auth(),
   storage: firebase.storage(),
   firestore: firebase.firestore(),
 };
+
+export default fb
