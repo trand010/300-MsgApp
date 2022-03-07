@@ -5,6 +5,7 @@ import Signup from "./Registration/Registration"
 import useAuth from "../hooks/useAuth"
 import useResolved from "../hooks/useResolved"
 import {useEffect} from 'react';
+import {ChatProvider} from '../chatcontext';
 
 function App() {
   const history = useHistory();
@@ -22,7 +23,8 @@ function App() {
 
 //This will have the route paths to the login, chat, and signup page
 //ex: localhost:3000/login
-  return (
+  return authResolved ? (
+    <ChatProvider authUser={authUser}>
     <div className='app'>
       <Switch>
         <Route path="/" exact component={Chat} />
@@ -30,7 +32,11 @@ function App() {
         <Route path="/signup" component={Signup} />
       </Switch>
     </div>
+    </ChatProvider>
+  ) : (
+   <>Loading...</>
   );
+
 };
 
 export default App
