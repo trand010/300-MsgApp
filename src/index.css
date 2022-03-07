@@ -73,3 +73,33 @@ code {
   color: #c40b0b;
   font-weight: bold;
 }
+.hide-UI {
+  position: absolute;
+  display: none;
+}
+
+.chat-container {
+  flex: 1;
+  height: 100%;
+  display: flex;
+}
+
+.current-chat {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #23272A;
+}
+
+.no-chat-selected {
+  display: flex;
+  font-size: 28px;
+  padding: 25px;
+  color: white;
+  align-self: center;
+  border-radius: 10px;
+  justify-content: center;
+  background-color: #2C2F33;
+  box-shadow: 0px 0px 3px black;
+}

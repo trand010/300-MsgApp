@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 //this hook is used to determine when an undefined value has been updated to the expected data type
 //overall this hook is used to tell when a value is not undefined anymore
 const useResolved = (
-  ...vals 
+  ...vals
 ) => {
   const [resolved, setResolved] = useState(false);
 

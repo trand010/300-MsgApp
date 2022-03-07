@@ -1,4 +1,4 @@
-import fb from 'firebase';
+import fb from './firebase';
 import { createContext, useContext, useEffect, useState } from 'react';
 import { newChat, leaveChat, deleteChat, getMessages } from 'react-chat-engine';
 
@@ -45,7 +45,6 @@ export const ChatProvider = ({ children, authUser }) => {
         .onSnapshot(snap => {
           setChatConfig({
             userSecret: authUser.uid,
-            avatar: snap.data().avatar,
             userName: snap.data().userName,
             projectID: '7b90e697-cfbe-41a2-bc56-9a4f0ca70ff0', //from chatengine
           });
@@ -54,7 +53,7 @@ export const ChatProvider = ({ children, authUser }) => {
   }, [authUser, setChatConfig]);
 
 
-//all of the functionalities of the chat
+  //all of the functionalities of the chat
   return (
     <ChatContext.Provider
       value={{
