@@ -6,6 +6,7 @@ import useAuth from "../hooks/useAuth"
 import useResolved from "../hooks/useResolved"
 import {useEffect} from 'react';
 import {ChatProvider} from '../chatcontext';
+import 'semantic-ui-css/semantic.min.css';
 
 function App() {
   const history = useHistory();

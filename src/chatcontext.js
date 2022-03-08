@@ -16,7 +16,7 @@ export const ChatProvider = ({ children, authUser }) => {
     newChat(chatConfig, { title: '' }); //takes chatConfig and then passes the title
   };
   const deleteChatClick = chat => { //delete chat click functionality, only admin is allowed to delete a chat
-    const isAdmin = chat.admin === chatConfig.userName;
+    const isAdmin = chat.admin.username === chatConfig.userName;
 
     if (
       isAdmin &&
