@@ -2,6 +2,7 @@ import { useChat } from '../chatcontext';
 import { useEffect } from 'react';
 import { getChats, ChatEngine } from 'react-chat-engine';
 import Sidebar from './Sidebar';
+import Toolbar from './Toolbar';
 
 const Chat = () => {
   const { myChats, setMyChats, chatConfig, selectedChat } = useChat();
@@ -31,7 +32,9 @@ const Chat = () => {
         <Sidebar />
         <div className="current-chat">
           {selectedChat ? (
-            <></>
+            <div className="chat">
+            <Toolbar />
+          </div>
           ) : (
             <div className="no-chat-selected">
               Select A Chat
